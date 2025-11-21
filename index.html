@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1" />
+	<title>PlayTown Toys — Fun for Every Child</title>
+	<meta name="description" content="PlayTown Toys — safe, creative and educational toys for kids of all ages." />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+	<style>
+		:root{--accent:#ff7a59;--muted:#6b7280;--bg:#f7fafc;--card:#ffffff}
+		*{box-sizing:border-box}
+		html,body{height:100%}
+		body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;color:#111827;background:var(--bg);-webkit-font-smoothing:antialiased}
+		header{background:linear-gradient(90deg,#fff 0%,#fff 60%,rgba(255,122,89,0.06)100%);border-bottom:1px solid #e6e9ee}
+		.container{max-width:1100px;margin:0 auto;padding:1rem}
+		.nav{display:flex;align-items:center;justify-content:space-between;gap:1rem}
+		.brand{display:flex;align-items:center;gap:.75rem}
+		.logo{width:44px;height:44px;background:linear-gradient(135deg,var(--accent),#ffd27f);border-radius:10px;display:grid;place-items:center;color:white;font-weight:700}
+		nav a{color:var(--muted);text-decoration:none;font-weight:600;margin-left:1rem}
+		.cta{background:var(--accent);color:white;padding:.5rem .9rem;border-radius:10px;text-decoration:none;font-weight:700}
+
+		/* Hero */
+		.hero{display:grid;grid-template-columns:1fr;gap:2rem;align-items:center;padding:3rem 0}
+		.hero-left h1{font-size:2rem;margin:0 0 .5rem;color:#0f172a}
+		.hero-left p{color:var(--muted);margin:0 0 1rem}
+		.search{display:flex;gap:.5rem}
+		.search input{flex:1;padding:.75rem;border-radius:10px;border:1px solid #e6e9ee}
+		.search button{background:var(--accent);border:none;color:#fff;padding:.75rem 1rem;border-radius:10px}
+		.hero-right{display:flex;justify-content:center}
+		.toy-card{width:320px;background:linear-gradient(180deg,#fff,#fff);border-radius:16px;padding:1rem;box-shadow:0 6px 18px rgba(15,23,42,0.06);text-align:center}
+		.toy-art{height:160px;background:linear-gradient(180deg,#ffedd8,#fff);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:2.5rem}
+
+		/* Sections */
+		.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem}
+		.card{background:var(--card);padding:1rem;border-radius:12px;box-shadow:0 6px 18px rgba(15,23,42,0.04)}
+		.card h3{margin:0 0 .5rem}
+		.categories{margin:2rem 0}
+		.products{margin:2rem 0}
+		.product{display:flex;flex-direction:column;gap:.5rem}
+		.product img{width:100%;height:160px;object-fit:cover;border-radius:8px;background:#f3f4f6}
+		.price{font-weight:700;color:#0f172a}
+		.muted{color:var(--muted)}
+
+		/* About & Contact */
+		.split{display:grid;grid-template-columns:1fr;gap:1rem;padding:2rem 0}
+		form{display:grid;gap:.5rem}
+		input,textarea{padding:.6rem;border-radius:8px;border:1px solid #e6e9ee}
+		button[type=submit]{background:#0f172a;color:#fff;padding:.6rem .9rem;border-radius:8px;border:none}
+
+		footer{Padding:2rem 0;color:var(--muted)}
+
+		/* Responsive */
+		@media(min-width:820px){
+			.hero{grid-template-columns:1fr 420px}
+			.split{grid-template-columns:1fr 380px}
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<div class="container nav">
+			<div class="brand">
+				<div class="logo">PT</div>
+				<div>
+					<div style="font-weight:700">PlayTown Toys</div>
+					<div style="font-size:.8rem;color:var(--muted)">Play. Learn. Grow.</div>
+				</div>
+			</div>
+			<nav style="margin-left:auto;display:flex;align-items:center">
+				<a href="#home">Home</a>
+				<a href="#shop">Shop</a>
+				<a href="#about">About</a>
+				<a href="#contact">Contact</a>
+				<a class="cta" href="#shop">Shop Now</a>
+			</nav>
+		</div>
+	</header>
+
+	<main class="container">
+		<section id="home" class="hero">
+			<div class="hero-left">
+				<h1>Safe, Creative Toys for Every Age</h1>
+				<p class="muted">Discover toys that inspire imagination, build skills and bring joy — handpicked and safety-checked.</p>
+				<div class="search" role="search">
+					<input id="search" type="search" placeholder="Search toys, brands, age...">
+					<button id="searchBtn">Search</button>
+				</div>
+				<div style="margin-top:1rem;display:flex;gap:.75rem;flex-wrap:wrap">
+					<small class="muted">Popular:</small>
+					<button class="card" style="padding:.35rem .6rem;border-radius:999px;border:1px solid #f0f0f0">Puzzles</button>
+					<button class="card" style="padding:.35rem .6rem;border-radius:999px;border:1px solid #f0f0f0">STEM Kits</button>
+					<button class="card" style="padding:.35rem .6rem;border-radius:999px;border:1px solid #f0f0f0">Plush</button>
+				</div>
+			</div>
+			<div class="hero-right">
+				<div class="toy-card">
+					<div class="toy-art">🧸</div>
+					<h3 style="margin:.75rem 0 0">Cuddly Friend Plush</h3>
+					<p class="muted">Soft, machine-washable, ideal for ages 0+</p>
+					<div style="display:flex;justify-content:space-between;align-items:center;margin-top:.75rem">
+						<div class="price">$24.99</div>
+						<button class="cta" onclick="addToCart('Cuddly Friend Plush')">Add to Cart</button>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="shop" class="categories">
+			<h2>Shop by Category</h2>
+			<div class="grid">
+				<div class="card">
+					<h3>Educational</h3>
+					<p class="muted">Hands-on STEM toys that spark curiosity.</p>
+				</div>
+				<div class="card">
+					<h3>Outdoor</h3>
+					<p class="muted">Active play and exploration gear.</p>
+				</div>
+				<div class="card">
+					<h3>Plush & Dolls</h3>
+					<p class="muted">Comforting friends for every child.</p>
+				</div>
+				<div class="card">
+					<h3>Puzzles & Games</h3>
+					<p class="muted">Family-friendly fun and brain boosters.</p>
+				</div>
+			</div>
+		</section>
+
+		<section class="products">
+			<h2>Featured Toys</h2>
+			<div class="grid">
+				<div class="product card">
+					<img alt="Wooden Blocks" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='600' height='400'><rect width='100%' height='100%' fill='%23f8fafc'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' fill='%23cbd5e1' font-size='28'>Wooden Blocks</text></svg>">
+					<h3>Wooden Blocks Set</h3>
+					<div class="muted">Ages 2+</div>
+					<div style="display:flex;justify-content:space-between;align-items:center">
+						<div class="price">$29.00</div>
+						<button class="cta" onclick="addToCart('Wooden Blocks Set')">Add</button>
+					</div>
+				</div>
+				<div class="product card">
+					<img alt="Robot Kit" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='600' height='400'><rect width='100%' height='100%' fill='%23f8fafc'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' fill='%23cbd5e1' font-size='28'>Robot Kit</text></svg>">
+					<h3>Build-a-Robot Kit</h3>
+					<div class="muted">Ages 8+</div>
+					<div style="display:flex;justify-content:space-between;align-items:center">
+						<div class="price">$49.00</div>
+						<button class="cta" onclick="addToCart('Build-a-Robot Kit')">Add</button>
+					</div>
+				</div>
+				<div class="product card">
+					<img alt="Puzzle" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='600' height='400'><rect width='100%' height='100%' fill='%23f8fafc'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' fill='%23cbd5e1' font-size='28'>Puzzle</text></svg>">
+					<h3>Ocean Puzzle 200pcs</h3>
+					<div class="muted">Ages 6+</div>
+					<div style="display:flex;justify-content:space-between;align-items:center">
+						<div class="price">$15.50</div>
+						<button class="cta" onclick="addToCart('Ocean Puzzle 200pcs')">Add</button>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="about" class="split">
+			<div>
+				<h2>About PlayTown</h2>
+				<p class="muted">PlayTown Toys curates high-quality, safe and developmentally-appropriate toys. We value sustainability, creativity and learning through play. Our selection is handpicked by educators and parents.</p>
+			</div>
+			<aside class="card">
+				<h3>Why choose us</h3>
+				<ul style="margin:0;padding-left:1rem;color:var(--muted)">
+					<li>Safety-checked products</li>
+					<li>Free shipping over $50</li>
+					<li>30-day returns</li>
+				</ul>
+			</aside>
+		</section>
+
+		<section id="contact">
+			<h2>Contact Us</h2>
+			<div class="split">
+				<div class="card">
+					<p class="muted">Have a question or need help picking the perfect toy? Send us a message.</p>
+					<form onsubmit="event.preventDefault(); alert('Thanks — we received your message!')">
+						<input placeholder="Your name" required />
+						<input type="email" placeholder="Email" required />
+						<textarea placeholder="Message" rows="4" required></textarea>
+						<button type="submit">Send Message</button>
+					</form>
+				</div>
+				<div class="card">
+					<h3>Visit Us</h3>
+					<p class="muted">123 Fun Street<br/>Playtown, PT 00000</p>
+					<p class="muted">Mon–Fri: 9am–6pm</p>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<footer>
+		<div class="container" style="display:flex;justify-content:space-between;align-items:center">
+			<div>
+				<strong>PlayTown Toys</strong>
+				<div class="muted">© <span id="year"></span> All rights reserved.</div>
+			</div>
+			<div class="muted">Built with care — shipping worldwide</div>
+		</div>
+	</footer>
+
+	<script>
+		document.getElementById('year').textContent = new Date().getFullYear();
+		function addToCart(name){
+			const prev = document.getElementById('cart-toast');
+			if(prev) prev.remove();
+			const t = document.createElement('div');
+			t.id = 'cart-toast';
+			t.style.position='fixed';t.style.right='20px';t.style.bottom='20px';t.style.background='#0f172a';t.style.color='#fff';t.style.padding='12px 16px';t.style.borderRadius='10px';t.style.boxShadow='0 6px 18px rgba(15,23,42,0.2)';
+			t.textContent = `${name} added to cart.`;
+			document.body.appendChild(t);
+			setTimeout(()=>{t.style.transition='opacity 300ms';t.style.opacity='0';setTimeout(()=>t.remove(),300)},2200);
+		}
+		// Simple search button demo
+		document.getElementById('searchBtn').addEventListener('click', ()=>{
+			const q = document.getElementById('search').value.trim();
+			if(!q) return alert('Please enter a search term.');
+			alert('Searching for: ' + q);
+		});
+	</script>
+</body>
+</html>
